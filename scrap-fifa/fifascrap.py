@@ -29,7 +29,7 @@ def AñadirPartidos():
     i = 0
     while i < len(elegir):
         partidosElegidos.append(partidosTotales[elegir[i] - 1])
-        i = i + 1
+        i += 1
 
 
 # Consulta los datos y los imprime por consola, y manda todo mas detallado al data.txt(va sobreescribiendo)
@@ -42,10 +42,10 @@ def consultarPartidos():
         file.write(partidosElegidos[i]+"\n"+"\n")
         if partidosElegidos[i].find("Currently unavailable") != -1:
             print(f"partido {elegir[i]} no disponible")
-            i = i + 1
+            i += 1
         else:
             print(f"partido {elegir[i]} disponible")
-            i = i + 1
+            i += 1
 
 
 AñadirPartidos()
