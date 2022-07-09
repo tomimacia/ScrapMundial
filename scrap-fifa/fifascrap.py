@@ -35,16 +35,16 @@ def AñadirPartidos():
 # Consulta los datos y los imprime por consola, y manda todo mas detallado al data.txt(va sobreescribiendo)
 
 def consultarPartidos():
-    file.write('Time: ' + now.strftime('%H:%M:%S\n'))
+    file.write('Time: ' + now.strftime('%H:%M:%S\n\n'))
     print('Time: ' + now.strftime('%H:%M:%S\n'))
     i = 0
     while i < len(partidosElegidos):
-        file.write(partidosElegidos[i]+"\n"+"\n")
+        file.write(partidosElegidos[i]+"\n\n")
         if partidosElegidos[i].find("Currently unavailable") != -1:
-            print(f"partido {elegir[i]} no disponible")
+            print(f"Partido {elegir[i]} no disponible")
             i += 1
         else:
-            print(f"partido {elegir[i]} disponible")
+            print(f"Partido {elegir[i]} disponible")
             i += 1
 
 
