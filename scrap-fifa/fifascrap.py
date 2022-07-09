@@ -41,10 +41,10 @@ def consultarPartidos():
     while i < len(partidosElegidos):
         file.write(partidosElegidos[i]+"\n\n")
         if partidosElegidos[i].find("Currently unavailable") != -1:
-            print(f"Partido {elegir[i]} no disponible")
+            print(f"Partido M{elegir[i]} no disponible")
             i += 1
         else:
-            print(f"Partido {elegir[i]} disponible")
+            print(f"Partido M{elegir[i]} disponible")
             i += 1
 
 
